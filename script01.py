@@ -14,8 +14,9 @@ print(img.shape)
 # prints dimensions
 print(img.ndim)
 
-# new variable resizing the img object
-resized_image = cv2.resize(img, (1000, 500))
+# new variable resizing the img object and .shape tuple
+# can also use normal preset res - .resize(img, (500, 1000)
+resized_image = cv2.resize(img, (int(img.shape[1]/2), int(img.shape[0]/2)))
 
 # displays image in window
 cv2.imshow("Galaxy", resized_image)
